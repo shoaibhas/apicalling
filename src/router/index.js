@@ -1,0 +1,11 @@
+import { Router } from "express";
+import studentRouter from "./student/index.js";
+import productRouter from "./products/index.js";
+import instituteRouter from "./institute/index.js";
+import teacherRouter from "./teacher/index.js";
+const allRouter = Router();
+allRouter.use("/student", studentRouter);
+allRouter.use("/product", productRouter);
+allRouter.use("/institute", instituteRouter);
+allRouter.use("/teacher", teacherRouter);
+export default allRouter;
